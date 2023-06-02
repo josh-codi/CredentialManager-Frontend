@@ -96,8 +96,5 @@ export default ({
 .login *{
     background: transparent;
 }
-input{
-    background: blue !important;
-}
 
 </style>
