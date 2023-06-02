@@ -46,7 +46,7 @@ export default {
         const logout = () => {
             if(confirm("Are you sure you want to leave?")){
                 useAuthStore().load()
-                axios.post('http://127.0.0.1:8000/api/logout/', {}, {
+                axios.post(`${store.baseUrl}logout/`, {}, {
                     headers: {
                         Authorization: `Token ${userStore.user?.token}` 
                     }

@@ -47,7 +47,7 @@ export default {
         let isPdfFile = ref(false);
 
         const getFileUrl = () => {
-            return `http://127.0.0.1:8000${file.value.file}`;
+            return `${store.fileAccessUrl}${file.value.file}`;
         };
 
         const checkFileType = () => {

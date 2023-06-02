@@ -38,12 +38,11 @@ export default {
         const store = useAuthStore();
         const userStore = useUserStore()
         const fileStore = useFileStore();
-        const base = store.baseUrl;
 
         onMounted(()=>{
             console.log('total', total)
 
-            axios.get(`${base}user/files/${userStore.user.user_id}/`)
+            axios.get(`${store.baseUrl}user/files/${userStore.user.user_id}/`)
             .then(res=>{
                 fileStore.setFiles(res.data)
             }).catch(e=>{

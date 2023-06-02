@@ -10,8 +10,8 @@ export const useAuthStore = defineStore('authStore', {
     isLoading: false,
     isLogin: Boolean(localStorage.getItem('isLogin')) ?? false,
     token: null,
-    baseUrl: "http://127.0.0.1:8000/api/",
-    fileAccessUrl: "http://127.0.0.1:8000",
+    baseUrl: "https://cred.up.railway.app/api/",
+    fileAccessUrl: "https://cred.up.railway.app/",
     headers: {
               'Authorization': `Token ${useUserStore().user?.token}`,
               'Content-Type': 'multipart/form-data',

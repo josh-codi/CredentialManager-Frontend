@@ -27,7 +27,7 @@
             </div>
 
             <div class="flex">
-                <div @click="store.cancle" class="p-3 w-50 border flex j-c-c mr-1">Cancle</div>
+                <div @click="store.cancel" class="p-3 w-50 border flex j-c-c mr-1">Cancle</div>
                 <button class="p-3 w-50 border flex j-c-c">Add File</button>
             </div>
 
@@ -57,13 +57,14 @@ export default {
         }
 
         const createFile = () => {
+            store.load()
             const formData = new FormData();
             formData.append('fileName', fileData.value.fileName);
             formData.append('file', fileData.value.file);
             formData.append('secret_code', fileData.value.secret_code);
             formData.append('is_public', fileData.value.is_public);
 
-            axios.post('http://127.0.0.1:8000/api/files/create/', formData, {
+            axios.post(`${store.baseUrl}files/create/`, formData, {
                     headers: {
                         'Authorization': `Token ${userStore.user.token}`,
                         'Content-Type': 'multipart/form-data',
@@ -71,9 +72,11 @@ export default {
                 })
                 .then(response => {
                     console.log(response.data);
-                    window.location.reload()
+                    window.location.reload();
+                    store.stopLoading();
                 })
                 .catch(error => {
+                    store.stopLoading();
                     console.error(error);
                 });
         }

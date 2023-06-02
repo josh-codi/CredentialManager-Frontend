@@ -67,7 +67,7 @@ export default ({
                 "email": details.value.email,
                 "password": details.value.password,
             };
-            axios.post('http://127.0.0.1:8000/api/login/', userDetails)
+            axios.post(`${store.baseUrl}login/`, userDetails)
                 .then(res => {
                     store.login();
                     userStore.setUser(res.data)

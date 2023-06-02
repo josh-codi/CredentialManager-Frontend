@@ -55,7 +55,7 @@ export default ({
                 password: details.value.password,
             };
 
-            axios.post('http://127.0.0.1:8000/api/register/', userDetails)
+            axios.post(`${store.baseUrl}register/`, userDetails)
                 .then(response => {
                     store.stopLoading();
                     router.push('/login')

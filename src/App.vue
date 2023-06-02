@@ -93,6 +93,7 @@ export default {
   right: 0;
   bottom: 0;
   top: 0;
+  z-index: 100;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
