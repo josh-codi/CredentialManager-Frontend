@@ -1,0 +1,13 @@
+.addFile{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 76, 0.56);
+
+}
+.addFile section{
+    background-color: white;
+    min-height: 150px;
+}

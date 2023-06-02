@@ -1,0 +1,44 @@
+.authContainer {
+    height: 100vh;
+}
+
+.authleft {
+    width: 50%;
+    height: 100%;
+}
+
+.authright {
+    width: 50%;
+    height: 100%;
+}
+
+.input-border{
+    border-width: 0 0 1px 0 !important;
+    border-color: gray !important;
+    background: white !important;
+    padding: 5px;
+    width: 300px;
+    outline: none;
+}
+.auth-icon{
+    font-size: 1.3rem;
+    margin: 0 0.7rem 0 0;
+}
+
+@media only screen and (max-width: 789px){
+    .authContainer{
+        flex-direction: column !important;
+    }
+    .authleft {
+        width: 100%;
+        height: 100%;
+    }
+
+    .authright {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+    }
+}

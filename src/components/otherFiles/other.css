@@ -1,0 +1,27 @@
+.otherfiles{
+    background: rgb(0, 25, 80);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.otherHeader{
+    background-color: rgb(0, 119, 255);
+    height: 50px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.thefile{
+    background-color: rgba(255, 255, 255, 0.249);
+    margin: 0 0 1rem 0;
+}
+
+@media only screen and (max-width: 992px) {
+    .thefile .flex small{
+        display: none;
+    }
+    .thefile .flex div{
+        width: 100% !important;
+    }
+    .thefile small{
+        display: none;
+    }
+}
