@@ -36,6 +36,10 @@
     border: 6px solid rgba(21, 1, 70, 0.4);
 }
 
+.menubtn{
+    display: none;
+}
+
 @media only screen and (max-width: 715px){
     .header{
         flex-direction: column !important;
@@ -43,10 +47,19 @@
         align-items: flex-start !important;
     }
 
+    .header section:nth-child(1){
+        width: 100%;
+    }
+
     .header section:nth-child(2){
         width: 100%;
         justify-content: flex-end;
         margin-top: 1rem;
+    }
+
+    .menubtn{
+        display: flex;
+        flex-grow: 1;
     }
 }
 

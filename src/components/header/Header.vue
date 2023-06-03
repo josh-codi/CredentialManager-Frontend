@@ -12,6 +12,9 @@
         
             <input type="text" placeholder="Search...">
         </div>
+        <div class="menubtn j-c-end">
+            <i class="fa fa-bars"></i>
+        </div>
     </section>
     <section class="flex">
         <div class="avatar round">
